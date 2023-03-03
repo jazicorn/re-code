@@ -5,19 +5,19 @@ import { AppService } from './app.service';
 import { ExampleModule } from './example/example.module';
 
 @Module({
-    imports: [
-        CacheModule.register({
-            isGlobal: true,
-        }),
-        ExampleModule,
-    ],
-    controllers: [AppController],
-    providers: [
-        AppService,
-        {
-            provide: APP_INTERCEPTOR,
-            useClass: CacheInterceptor,
-        },
-    ],
+  imports: [
+    CacheModule.register({
+      isGlobal: true,
+    }),
+    ExampleModule,
+  ],
+  controllers: [AppController],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
+    },
+  ],
 })
 export class AppModule {}
