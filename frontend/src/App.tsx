@@ -1,9 +1,10 @@
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome</h1>
-      <span className="material-icons-outlined">home</span>
+      <HomeOutlinedIcon />
     </div>
   );
 }
